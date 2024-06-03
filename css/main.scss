@@ -1,5 +1,8 @@
 @import "variables";
 
+@import "nav";
+@import "hero";
 body {
-  background: $lightGreen;
+  padding: 0;
+  margin: 0;
 }
