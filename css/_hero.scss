@@ -1,56 +1,158 @@
-@import "variables";
-
 #hero {
-  .container-fluid {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/kacaWide.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+
+  .navbar {
+    background-color: transparent;
+    padding: 1rem 2rem;
+
+    .nav-link {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0 10px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $goldColor;
+        text-decoration: underline $goldColor;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 2px;
+      }
+    }
+
+    .selected {
+      color: $goldColor;
+      text-decoration: underline $goldColor;
+      text-underline-offset: 10px;
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  .wrapper {
+    flex: 1;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem;
 
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0.6) 70%,
-        rgba(0, 0, 0, 1)
-      ),
-      url("../img/testBackground.jpg") no-repeat center center/cover;
-    height: calc(100vh - $navbar-height);
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
 
-    .heroText {
-      color: white;
+    .hero-text {
+      //text-align: center;
+      color: #fff;
+      padding: 6rem 1rem;
+      max-width: 700px;
+      // margin: 0 auto;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
 
-      padding: 40px;
-
-      button {
-        display: inline-block;
-        outline: 0;
-        cursor: pointer;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
-        background: #ffd814;
-        border: 1px solid #fcd200;
-        font-size: 13px;
-        height: 31px;
-        padding: 0 11px;
-        text-align: center;
-        width: 100%;
-        min-width: 200px;
-        font-weight: 500;
-        color: #0f1111;
-        :hover {
-          background: #f7ca00;
-          border-color: #f2c200;
-          box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+      h1 {
+        font-family: "Alex Brush", cursive;
+        font-size: 5rem;
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+        //color: $goldColor;
+        @media (max-width: 768px) {
+          font-size: 2.4rem;
         }
+      }
+      .lead {
+        font-size: 1.25rem;
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+      }
+      .subtle {
+        font-size: 1rem;
+        font-weight: 200;
+        opacity: 0.9;
+        margin-bottom: 1rem;
+      }
+      .custom-button {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.75rem 2.5rem;
+        border: 1px solid $goldColor;
+        //border-radius: 30px;
+
+        background-color: $goldColor;
+        color: white;
+        //opacity: 0.6;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+      .custom-button2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.75rem 2.5rem;
+        border: 2px solid $goldColor;
+        //border-radius: 30px;
+
+        background-color: transparent;
+        color: white;
+        //opacity: 0.6;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+
+    .hero-image {
+      flex: 1;
+      max-width: 500px;
+      min-width: 280px;
+      text-align: center;
+      margin: 20px 0;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
       }
     }
   }
 
-  //   .container-fluid ::before {
-  //     content: "";
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     right: 0;
-  //     bottom: 0;
-  //     background: rgba(0, 0, 0, 0.5); /* Overlay for better readability */
-  //   }
+  .icons {
+    color: $goldColor;
+    display: flex;
+    // flex-grow: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 2rem;
+    gap: 10px;
+    margin-right: 10px;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

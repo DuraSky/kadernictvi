@@ -1,0 +1,30 @@
+.links {
+  background-color: $goldBg;
+  padding: 3rem 1rem;
+
+  .linksContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+
+    .link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+
+      i {
+        font-size: 2rem;
+        margin-top: 0.5rem;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

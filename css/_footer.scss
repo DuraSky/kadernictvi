@@ -1,0 +1,11 @@
+.footer {
+  background-color: $goldBg;
+
+  .footerContent {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 10px;
+    //background-color: lightgray;
+  }
+}

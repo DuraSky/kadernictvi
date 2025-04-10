@@ -1,70 +1,309 @@
-.navbar {
-  height: 70px;
-}
-.navbar .row {
-  align-items: center;
-}
-.navbar span {
+#hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/kacaWide.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
   display: flex;
-  padding: 20px;
-  color: black;
-  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
-.navbar span h3 {
-  color: black;
+#hero .navbar {
+  background-color: transparent;
+  padding: 1rem 2rem;
 }
-
-.navbar-nav {
-  flex-grow: 0.05;
-  justify-content: space-evenly;
-}
-
-nav {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  text-transform: uppercase;
-}
-
-.nav-link {
-  color: black;
-  line-height: 1.2;
+#hero .navbar .nav-link {
   font-weight: 600;
-  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 10px;
+  transition: color 0.3s;
 }
-
-#hero .container-fluid {
+#hero .navbar .nav-link:hover {
+  color: #d4af37;
+  text-decoration: underline #d4af37;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+}
+#hero .navbar .selected {
+  color: #d4af37;
+  text-decoration: underline #d4af37;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+}
+#hero .wrapper {
+  flex: 1;
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.6) 70%, rgb(0, 0, 0)), url("../img/testBackground.jpg") no-repeat center center/cover;
-  height: calc(100vh - 70px);
-}
-#hero .container-fluid .heroText {
-  color: white;
-  padding: 40px;
-}
-#hero .container-fluid .heroText button {
-  display: inline-block;
-  outline: 0;
-  cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
-  background: #ffd814;
-  border: 1px solid #fcd200;
-  font-size: 13px;
-  height: 31px;
-  padding: 0 11px;
-  text-align: center;
+  flex-wrap: wrap;
   width: 100%;
-  min-width: 200px;
-  font-weight: 500;
-  color: #0f1111;
+  padding: 2rem;
 }
-#hero .container-fluid .heroText button :hover {
-  background: #f7ca00;
-  border-color: #f2c200;
-  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+@media (max-width: 768px) {
+  #hero .wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#hero .wrapper .hero-text {
+  color: #fff;
+  padding: 6rem 1rem;
+  max-width: 700px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+#hero .wrapper .hero-text h1 {
+  font-family: "Alex Brush", cursive;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 768px) {
+  #hero .wrapper .hero-text h1 {
+    font-size: 2.4rem;
+  }
+}
+#hero .wrapper .hero-text .lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+#hero .wrapper .hero-text .subtle {
+  font-size: 1rem;
+  font-weight: 200;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+#hero .wrapper .hero-text .custom-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 2.5rem;
+  border: 1px solid #d4af37;
+  background-color: #d4af37;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#hero .wrapper .hero-text .custom-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+#hero .wrapper .hero-text .custom-button2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 2.5rem;
+  border: 2px solid #d4af37;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#hero .wrapper .hero-text .custom-button2:hover {
+  background-color: #fff;
+  color: #000;
+}
+#hero .wrapper .hero-image {
+  flex: 1;
+  max-width: 500px;
+  min-width: 280px;
+  text-align: center;
+  margin: 20px 0;
+}
+#hero .wrapper .hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+#hero .icons {
+  color: #d4af37;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 2rem;
+  gap: 10px;
+  margin-right: 10px;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aboutMe {
+  padding: 4rem 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("../img/moroccan-flower.png");
+  background-repeat: repeat;
+  background-size: auto;
+  position: relative;
+  z-index: -11;
+}
+.aboutMe .scribbleImg {
+  position: absolute;
+  top: -10px;
+  right: 200px;
+  z-index: -10;
+}
+.aboutMe .aboutContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.aboutMe .aboutContent .paraBorder {
+  flex: 1 1 300px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  border: solid #dfbd69;
+  border-style: double;
+  border-bottom: none;
+  border-right: none;
+  padding: 30px;
+}
+.aboutMe .aboutContent img {
+  flex: 1 1 300px;
+  max-width: 100%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.services {
+  padding: 4rem 0;
+}
+.services .servicesContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.services .servicesContent img {
+  flex: 1 1 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+.services .servicesContent .servicesText {
+  flex: 1 1 300px;
+}
+.services .servicesContent .servicesText p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.services .servicesContent .servicesText ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+.services .servicesContent .servicesText ul li {
+  margin-bottom: 0.5rem;
+}
+.services .servicesContent .servicesText button {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.services .servicesContent .servicesText button:hover {
+  background-color: #b29126;
+}
+
+.links {
+  background-color: #dfbd69;
+  padding: 3rem 1rem;
+}
+.links .linksContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+}
+.links .linksContent .link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.links .linksContent .link i {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+.links .linksContent .link:hover {
+  transform: scale(1.05);
+}
+
+.cta {
+  background-color: #d4af37;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.cta .ctaHeader {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta button {
+  background-color: white;
+  color: #d4af37;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.cta button:hover {
+  background-color: white;
+}
+
+section .galleryWrapper {
+  background-color: grey;
+  text-align: center;
+  padding: 10px 0;
+}
+section .galleryWrapper h3 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+section .galleryWrapper .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+section .galleryWrapper .gallery img {
+  width: 200px;
+}
+
+.footer {
+  background-color: #dfbd69;
+}
+.footer .footerContent {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+body,
+p {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  padding-right: 0 !important;
 }

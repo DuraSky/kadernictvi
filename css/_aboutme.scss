@@ -1,0 +1,43 @@
+.aboutMe {
+  padding: 4rem 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url("../img/moroccan-flower.png");
+  background-repeat: repeat;
+  background-size: auto;
+  position: relative;
+  z-index: -11;
+  .scribbleImg {
+    position: absolute;
+    top: -10px;
+    right: 200px;
+    z-index: -10;
+  }
+  .aboutContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .paraBorder {
+      flex: 1 1 300px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      border: solid $goldBg;
+      border-style: double;
+      border-bottom: none;
+      border-right: none;
+      padding: 30px;
+    }
+
+    img {
+      flex: 1 1 300px;
+      max-width: 100%;
+      //border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
