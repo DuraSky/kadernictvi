@@ -24,17 +24,22 @@
 
     .paraBorder {
       flex: 1 1 300px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
       line-height: 1.6;
       border: solid $goldBg;
-      border-style: double;
+      // border-style: double;
+      border-top: none;
       border-bottom: none;
       border-right: none;
       padding: 30px;
+      .custom-button {
+        margin-top: 15px;
+      }
     }
 
     img {
-      flex: 1 1 300px;
+      flex: 1 1 100px;
       max-width: 100%;
       //border-radius: 12px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);

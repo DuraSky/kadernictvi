@@ -1,11 +1,67 @@
 .footer {
   background-color: $goldBg;
+  padding: 2rem 1rem;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url("../img/moroccan-flower.png");
+  background-repeat: repeat;
+  background-size: auto;
+  position: relative;
+  z-index: -11;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+  }
 
   .footerContent {
     display: flex;
-    flex-grow: 1;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px;
-    //background-color: lightgray;
+    gap: 2rem;
+
+    .footerCol {
+      flex: 1 1 250px;
+
+      h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: $goldColor;
+
+        // pokud máš proměnné, klidně: color: $primaryColor;
+      }
+
+      a {
+        color: $goldColor;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      p {
+        margin: 0 0 6px;
+      }
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      .link {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+
+  .footerBottom {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
   }
 }
